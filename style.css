@@ -239,3 +239,53 @@ input[type='range']:hover::-moz-range-thumb {
   border-bottom: none;
   padding-bottom: 0;
 }
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .wrapper {
+    font-size: 14px;
+  }
+
+  .transactions-label {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .powered-by {
+    font-size: 12px;
+  }
+
+  .info-card {
+    width: 90%;
+  }
+
+  .info-content {
+    flex-direction: column;
+  }
+
+  .info-text {
+    width: 100%;
+  }
+
+  .info-images {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .info-images img {
+    width: calc(50% - 10px);
+    margin-bottom: 10px;
+  }
+
+  .faq-answer {
+    padding-left: 20px;
+  }
+}
