@@ -4,9 +4,10 @@ function updateValues() {
 
   const annualTransactions = transactionsPerWeek * 1;
 
-  document.getElementById('co2').innerText = (annualTransactions * 130).toFixed(
-    0
-  );
+  const co2 = annualTransactions * 130;
+  document.getElementById('co2').innerText =
+    co2 > 1000 ? (co2 / 1000).toFixed(1) + ' kg' : co2.toFixed(0) + ' g';
+
   document.getElementById('bags').innerText = (annualTransactions * 13).toFixed(
     0
   );
@@ -16,9 +17,11 @@ function updateValues() {
   document.getElementById('cups').innerText = (annualTransactions * 3).toFixed(
     0
   );
-  document.getElementById('miles').innerText = (
-    annualTransactions * 400
-  ).toFixed(0);
+
+  const miles = annualTransactions * 400;
+  document.getElementById('miles').innerText =
+    miles > 1000 ? (miles / 1000).toFixed(1) + ' km' : miles.toFixed(0) + ' m';
+
   document.getElementById('bottles').innerText = (
     annualTransactions * 3
   ).toFixed(0);
@@ -39,3 +42,12 @@ function updateProgress() {
 
 // Initialize values
 updateValues();
+document.querySelectorAll('.faq-question').forEach((question) => {
+  question.addEventListener('click', () => {
+    const answer = question.nextElementSibling;
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    const icon = question.querySelector('.fas');
+    icon.style.transform =
+      answer.style.display === 'block' ? 'rotate(180deg)' : 'rotate(0deg)';
+  });
+});
