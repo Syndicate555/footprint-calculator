@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receipt Footprint Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <h1>
+          Annual Receipt Footprint Calculator
+          <span class="powered-by">powered by Platen</span>
+        </h1>
+
+        <label for="transactions" class="transactions-label"
+          ><i class="fas fa-receipt"><span> </span></i> Transactions per week:
+          <span id="transactionsValue">0</span></label
+        >
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="0"
+          id="transactions"
+          oninput="updateValues()"
+        />
+        <br />
+        <br />
+        <label
+          >That's equivalent to........ <span id="transactionsValue"></span
+        ></label>
+        <br />
+        <div id="output">
+          <div class="output-item">
+            <i class="fas fa-cloud fa-beat"></i>
+            <p>CO2 emissions: <span id="co2">0</span> grams</p>
+          </div>
+          <div class="output-item">
+            <i class="fas fa-shopping-bag fa-beat"></i>
+            <p>Plastic bags: <span id="bags">0</span></p>
+          </div>
+          <div class="output-item">
+            <i class="fas fa-lines-leaning fa-beat"></i>
+            <p>Plastic straws: <span id="straws">0</span></p>
+          </div>
+          <div class="output-item">
+            <i class="fas fa-coffee fa-beat"></i>
+            <p>Disposable coffee cups with lids: <span id="cups">0</span></p>
+          </div>
+          <div class="output-item">
+            <i class="fas fa-car fa-beat"></i>
+            <p>Miles driven in a car: <span id="miles">0</span> meters</p>
+          </div>
+          <div class="output-item">
+            <i class="fas fa-bottle-water fa-beat"></i>
+            <p>Bottled water: <span id="bottles">0</span></p>
+          </div>
+          <div class="output-item">
+            <i class="fas fa-lightbulb fa-beat"></i>
+            <p>
+              Lightbulb (60 watt) usage: <span id="Lightbulb">0</span> hours
+            </p>
+          </div>
+          <div class="output-item">
+            <i class="fas fa-utensils fa-beat"></i>
+            <p>Plastic cutlery: <span id="cutlery">0</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="info-card">
+        <h2>Why Receipt Footprint Matters</h2>
+        <p>
+          Every year, millions of receipts are generated across the world,
+          contributing to the consumption of natural resources and the
+          generation of waste. Understanding your receipt footprint can help you
+          make conscious decisions to reduce waste and support a greener
+          environment.
+        </p>
+        <div class="info-images">
+          <img
+            src="https://via.placeholder.com/200x150"
+            alt="Receipts and waste"
+          />
+          <img
+            src="https://via.placeholder.com/200x150"
+            alt="Sustainable shopping choices"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
