@@ -1,3 +1,3 @@
 # receipt-footprint-calculator
 
-https://receiptfootprintcalculator.netlify.app/
+live demo: https://receiptfootprintcalculator.netlify.app/
